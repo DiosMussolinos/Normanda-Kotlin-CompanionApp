@@ -9,19 +9,21 @@
         android:roundIcon="@mipmap/background_splash"
         android:supportsRtl="true"
         android:theme="@style/Theme.Normanda">
+        <activity android:name=".Challenge"></activity>
+        <activity android:name=".Wiki" />
+        <activity android:name=".Map" />
 
-        <!--START SPLASH SCREEN-->
+        <!-- START SPLASH SCREEN -->
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!--START MAIN ACTIVITY-->
+        </activity> <!-- START MAIN ACTIVITY -->
         <activity android:name=".MainActivity">
-            <!--SOME SHIT-->
+
+            <!-- SOME SHIT -->
         </activity>
     </application>
 
