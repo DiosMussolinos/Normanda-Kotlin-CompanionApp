@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Normanda</string>
+    <string name="challenges">challenges</string>
+    <string name="stats">stats</string>
+    <string name="wiki">wiki</string>
+    <string name="map">map</string>
 </resources>
