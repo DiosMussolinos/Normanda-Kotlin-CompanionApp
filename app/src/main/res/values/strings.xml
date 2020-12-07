@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">Normanda</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="challenge_layout">Challenge Layout</string>
-    <string name="wiki">wiki</string>
-</resources>
