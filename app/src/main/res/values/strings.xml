@@ -6,4 +6,8 @@
     <string name="wiki">WIKI</string>
     <string name="challenge">Challenge</string>
     <string name="player_image">PLAYER IMAGE</string>
+    <string name="health_health">Health = + Health</string>
+    <string name="level_player_level">Level = + Player_level</string>
+    <string name="player_attack_atk">player_Attack = + atk</string>
+
 </resources>

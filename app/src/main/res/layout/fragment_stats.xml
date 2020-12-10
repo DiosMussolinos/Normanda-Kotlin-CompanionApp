@@ -5,38 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    android:background="@color/trans_red"
+    android:background="@color/black"
     tools:context=".Fragments.StatsFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/imagePlayer"
-            android:layout_width="150dp"
-            android:layout_height="300dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.056"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.499"
-            tools:src="@tools:sample/avatars" />
-
         <TextView
             android:id="@+id/atk"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text='"player_Attack = "+ atk'
-            android:textColor="#000000"
+            android:fontFamily="@font/roman_sd"
+            android:text="@string/player_attack_atk"
+            android:textColor="#FFFFFF"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.536"
-            app:layout_constraintStart_toEndOf="@+id/imagePlayer"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Health"
-            app:layout_constraintVertical_bias="0.209" />
+            app:layout_constraintVertical_bias="0.224" />
 
         <TextView
             android:id="@+id/textView3"
@@ -44,29 +32,41 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="93dp"
             android:layout_marginBottom="216dp"
-            android:text='"Level = "+ Player_level'
-            android:textColor="#000000"
+            android:fontFamily="@font/roman_sd"
+            android:text="@string/level_player_level"
+            android:textColor="#FFFFFF"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.575"
-            app:layout_constraintStart_toEndOf="@+id/imagePlayer"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/atk"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="0.321" />
 
         <TextView
             android:id="@+id/Health"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text='"Health = "+ Health'
-            android:textColor="#000000"
+            android:fontFamily="@font/roman_sd"
+            android:text="@string/health_health"
+            android:textColor="#FFFFFF"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.556"
-            app:layout_constraintStart_toEndOf="@+id/imagePlayer"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.304" />
+            app:layout_constraintVertical_bias="0.638" />
+
+        <ImageView
+            android:id="@+id/player_image"
+            android:layout_width="281dp"
+            android:layout_height="287dp"
+            android:contentDescription="@string/player_image"
+            android:src="@drawable/player_image"
+            app:layout_constraintBottom_toTopOf="@+id/Health"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </RelativeLayout>
