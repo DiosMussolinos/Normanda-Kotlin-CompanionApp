@@ -17,7 +17,7 @@ class SplashScreen : AppCompatActivity() {
 
         handler.postDelayed({
 
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, Normanda_Login::class.java)
             startActivity(intent)
             finish()
 
