@@ -13,5 +13,11 @@
     <string name="sign_in">sign In</string>
     <string name="password">Password</string>
     <string name="e_mail">e-mail</string>
+    <string name="came_from_hell">Came from hell</string>
+    <string name="_10_damage">10 + Damage</string>
+    <string name="_10_gold">10 gold</string>
+    <string name="bruno">Bruno</string>
     <string name="todo">TODO</string>
+    <string name="_10">10</string>
+
 </resources>

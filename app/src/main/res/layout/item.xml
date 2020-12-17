@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#a38c67">
+
+        <ImageView
+            android:id="@+id/item_image"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/escudo0"
+            tools:ignore ="ContentDescription"/>
+
+        <TextView
+            android:id="@+id/item_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="95dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="65dp"
+            android:fontFamily="@font/roman_sd"
+            android:text="@string/bruno"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/item_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="300dp"
+            android:layout_marginLeft="300dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="70dp"
+            android:fontFamily="@font/roman_sd"
+            android:text="@string/_10"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/item_lore"
+            android:layout_width="269dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="95dp"
+            android:layout_marginLeft="90dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="25dp"
+            android:fontFamily="@font/roman_sd"
+            android:text="@string/came_from_hell"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/item_stats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="95dp"
+            android:layout_marginLeft="90dp"
+            android:layout_marginTop="90dp"
+            android:layout_marginBottom="0dp"
+            android:fontFamily="@font/roman_sd"
+            android:text="@string/_10_damage"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/gold_bag"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="325dp"
+            android:layout_marginLeft="320dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="0dp"
+
+            android:contentDescription="@string/todo"
+            android:src="@drawable/gold_bag" />
+
+    </RelativeLayout>
+
+
+
+
+</androidx.cardview.widget.CardView>

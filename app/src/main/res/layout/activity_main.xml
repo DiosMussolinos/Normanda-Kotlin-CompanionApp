@@ -29,7 +29,7 @@
             android:layout_width="72dp"
             android:layout_height="60dp"
             android:layout_margin="5dp"
-            android:background="@color/trans_red"
+            android:color="@android:color/holo_red_dark"
             android:padding="15dp"
             android:src="@drawable/ic_baseline_sports_kabaddi_24" />
 
@@ -38,7 +38,7 @@
             android:layout_width="72dp"
             android:layout_height="60dp"
             android:layout_margin="5dp"
-            android:background="@color/trans_red"
+            android:color="@android:color/holo_red_dark"
             android:padding="15dp"
             android:src="@drawable/ic_baseline_map" />
 
@@ -47,7 +47,7 @@
             android:layout_width="72dp"
             android:layout_height="60dp"
             android:layout_margin="5dp"
-            android:background="@color/trans_red"
+            android:color="@android:color/holo_red_dark"
             android:padding="15dp"
             android:src="@drawable/ic_baseline_library_books" />
 
@@ -56,7 +56,7 @@
             android:layout_width="72dp"
             android:layout_height="60dp"
             android:layout_margin="5dp"
-            android:background="@color/trans_red"
+            android:color="@android:color/holo_red_dark"
             android:padding="15dp"
             android:src="@drawable/ic_baseline_fitness" />
 
@@ -65,8 +65,7 @@
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/mViewPager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
+        android:layout_height="match_parent" />
 
 
 </RelativeLayout>
