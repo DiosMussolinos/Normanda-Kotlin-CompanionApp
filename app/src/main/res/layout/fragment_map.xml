@@ -21,7 +21,7 @@
 
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/Background"
         android:layout_width="356dp"
         android:layout_height="169dp"
         android:src="@drawable/logo_phase_background"
@@ -30,19 +30,72 @@
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.156"
-        android:contentDescription="@string/todo" />
+        app:layout_constraintVertical_bias="0.156" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/logo"
         android:layout_width="334dp"
         android:layout_height="134dp"
         android:src="@drawable/logo_phase"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-        app:layout_constraintEnd_toEndOf="@+id/imageView2"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        app:layout_constraintBottom_toBottomOf="@+id/Background"
+        app:layout_constraintEnd_toEndOf="@+id/Background"
+        app:layout_constraintStart_toStartOf="@+id/Background"
+        app:layout_constraintTop_toTopOf="@+id/Background"
         app:layout_constraintVertical_bias="0.485"
-        android:contentDescription="@string/todo" />
+ />
+
+    <Button
+        android:id="@+id/MapN2"
+        android:layout_width="116dp"
+        android:layout_height="122dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginTop="88dp"
+        android:text="@string/n2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/mapN1"
+        app:layout_constraintTop_toBottomOf="@+id/Background"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/mapN1"
+        android:layout_width="116dp"
+        android:layout_height="122dp"
+        android:layout_marginTop="88dp"
+        android:text="@string/n1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.216"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Background"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/mapN3"
+        android:layout_width="116dp"
+        android:layout_height="122dp"
+        android:layout_marginTop="48dp"
+        android:text="@string/n3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.216"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mapN1"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/mapN4"
+        android:layout_width="116dp"
+        android:layout_height="122dp"
+        android:layout_marginTop="48dp"
+        android:text="@string/n4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.452"
+        app:layout_constraintStart_toEndOf="@+id/mapN3"
+        app:layout_constraintTop_toBottomOf="@+id/MapN2"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

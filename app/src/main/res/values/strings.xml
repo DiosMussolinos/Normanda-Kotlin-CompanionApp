@@ -17,7 +17,16 @@
     <string name="_10_damage">10 + Damage</string>
     <string name="_10_gold">10 gold</string>
     <string name="bruno">Bruno</string>
-    <string name="todo">TODO</string>
+
     <string name="_10">10</string>
+    <string name="n2">N2</string>
+    <string name="n1">N1</string>
+    <string name="n3">N3</string>
+    <string name="n4">N4</string>
+    <string name="_10_00">10:00</string>
+
+    <string name="add">TODO</string>
+    <string name="todoasd">TODO</string>
+    <string name="todoads">TODO</string>
 
 </resources>
