@@ -8,25 +8,17 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.ProgressBar
+import android.widget.TextView
 import com.example.freshexample.util.PrefUtil
 import com.example.normanda_capp.R
 //import kotlinx.android.synthetic.main.fragment_your_fragment_name.view.*
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [Challenge.newInstance] factory method to
- * create an instance of this fragment.
- */
-class Challenge : Fragment() {
+class Challenge : Fragment(R.layout.fragment_challenge) {
 
     private lateinit var  start: ImageView
     private lateinit var  stop: ImageView
     private lateinit var  challengeCountdown: ProgressBar
+    private lateinit var textCountdown: TextView
 
 
     enum class TimerState{
@@ -44,27 +36,30 @@ class Challenge : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+    override fun onCreateView(
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        return super.onCreateView(inflater, container, savedInstanceState)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
         //init image buttons
-        //ERROR HERE
-        start = findViewById(R.id.playbutton)
-        //ERROR HERE
-        stop = findViewById(R.id.stopbutton)
+        start = view.findViewById(R.id.playbutton)
+        stop = view.findViewById(R.id.stopbutton)
 
         start.setOnClickListener {
             startTimer()
-            timerState = TimerState.Stopped
+            timerState = TimerState.Running
             updateButtons()
         }
 
         stop.setOnClickListener {
             timer.cancel()
+            timerState = TimerState.Stopped
             onTimerFinished()
         }
     }
@@ -88,16 +83,16 @@ class Challenge : Fragment() {
         }
 
         //ERROR HERE
-        PrefUtil.setPreviousTimerLengthSeconds(timerLengthSeconds, this)
+        PrefUtil.setPreviousTimerLengthSeconds(timerLengthSeconds,this.requireActivity())
         //ERROR HERE
-        PrefUtil.setSecondsRemaining(secondsRemaining, this)
+        PrefUtil.setSecondsRemaining(secondsRemaining, this.requireActivity())
         //ERROR HERE
-        PrefUtil.setTimerState(timerState, this)
+        PrefUtil.setTimerState(timerState, this.requireActivity())
     }
 
     private fun initTimer(){
         //ERROR HERE
-        timerState = PrefUtil.getTimerState(this)
+        timerState = PrefUtil.getTimerState(this.requireActivity())
 
         if(timerState == TimerState.Stopped) {
             setNewTimerLength()
@@ -108,7 +103,7 @@ class Challenge : Fragment() {
 
         secondsRemaining = if(timerState == TimerState.Running) {
             //ERROR HERE
-            PrefUtil.getSecondsRemaining(this)
+            PrefUtil.getSecondsRemaining(this.requireActivity())
         }else {
             timerLengthSeconds
         }
@@ -132,7 +127,7 @@ class Challenge : Fragment() {
         challengeCountdown.progress = 0
 
         //ERROR HERE
-        PrefUtil.setSecondsRemaining(timerLengthSeconds, this)
+        PrefUtil.setSecondsRemaining(timerLengthSeconds, this.requireActivity())
         secondsRemaining = timerLengthSeconds
 
         updateButtons()
@@ -156,14 +151,14 @@ class Challenge : Fragment() {
 
     private fun setNewTimerLength(){
         //ERROR HERE
-        val lengthInMinutes = PrefUtil.getTimerLength(this)
+        val lengthInMinutes = PrefUtil.getTimerLength(this.requireActivity())
         timerLengthSeconds = (lengthInMinutes * 60L)
-        challengeCountdown.max = timerLengthSeconds.toInt()
+        //   challengeCountdown.max = timerLengthSeconds.toInt()
     }
 
     private fun setPreviousTimerLength(){
         //ERROR HERE
-        timerLengthSeconds = PrefUtil.getPreviousTimerLengthSeconds(this)
+        timerLengthSeconds = PrefUtil.getPreviousTimerLengthSeconds(this.requireActivity())
         challengeCountdown.max = timerLengthSeconds.toInt()
     }
 
@@ -173,9 +168,9 @@ class Challenge : Fragment() {
         val secondsStr = secondsInMinutesUntilFinished.toString()
 
         //ERROR HERE
-        textCountdown.text = "$minutesUntilFinished:${if(secondsStr.length == 2) secondsStr
-        else "0$secondsStr"}"
-        challengeCountdown.progress = (timerLengthSeconds - secondsRemaining).toInt()
+        //    textCountdown.text = "$minutesUntilFinished:${if(secondsStr.length == 2) secondsStr
+        //  else "0$secondsStr"}"
+        // challengeCountdown.progress = (timerLengthSeconds - secondsRemaining).toInt()
 
     }
 
@@ -193,31 +188,4 @@ class Challenge : Fragment() {
         }
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_challenge, container, false)
-    }
-
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment Challenge.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            Challenge().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
-    }
 }

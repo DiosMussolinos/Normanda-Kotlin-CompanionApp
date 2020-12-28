@@ -4,6 +4,7 @@ import android.content.Context
 import android.preference.PreferenceManager
 import com.example.normanda_capp.Fragments.Challenge
 
+
 class PrefUtil {
     companion object{
         fun getTimerLength(context: Context): Int{
