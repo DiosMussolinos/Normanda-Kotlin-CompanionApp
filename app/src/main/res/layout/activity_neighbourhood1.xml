@@ -8,23 +8,23 @@
     tools:context="Map.Neighbourhood.Neighbourhood1">
 
     <ImageView
-        android:id="@+id/BackToMap"
-        android:layout_width="392dp"
-        android:layout_height="564dp"
+        android:id="@+id/TreasureMapN1"
+        android:layout_width="341dp"
+        android:layout_height="496dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497"
+        app:layout_constraintVertical_bias="0.28"
         app:srcCompat="@drawable/treasure_map_n1"
- />
+        android:contentDescription="@string/todo" />
 
     <ImageView
-        android:id="@+id/TreasureMapN1"
+        android:id="@+id/BackToMap"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/BackToMap"
+        android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toTopOf="@+id/TreasureMapN1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,4 +32,27 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_baseline_close_24"
         tools:ignore="VectorDrawableCompat" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="389dp"
+        android:layout_height="393dp"
+        android:layout_marginTop="440dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_phase_background"
+        android:contentDescription="@string/z" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="371dp"
+        android:layout_height="161dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView6"
+        app:layout_constraintVertical_bias="0.525"
+        app:srcCompat="@drawable/logo_phase"
+        android:contentDescription="@string/todo" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,8 +10,8 @@ import com.example.normanda_capp.Adaptor.PagerAdaptor
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var  mViewPager:ViewPager
-    private lateinit var  stats:ImageView
+    private lateinit var mViewPager:ViewPager
+    private lateinit var stats:ImageView
     private lateinit var map:ImageView
     private lateinit var wiki:ImageView
     private lateinit var exercise: ImageView

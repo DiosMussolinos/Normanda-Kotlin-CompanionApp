@@ -4,15 +4,55 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#a38c67"
     tools:context="Map.Neighbourhood.Neighbourhood2">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="N2"
-        app:layout_constraintBottom_toBottomOf="parent"
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="389dp"
+        android:layout_height="393dp"
+        android:layout_marginTop="432dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_phase_background" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="371dp"
+        android:layout_height="161dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginBottom="108dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView6"
+        app:srcCompat="@drawable/logo_phase" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="451dp"
+        android:layout_height="595dp"
+        android:contentDescription="TODO"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.275"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.352"
+        app:srcCompat="@drawable/treasure_map_n2" />
+
+    <ImageView
+        android:id="@+id/BackToMap1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_baseline_close_24"
+        android:contentDescription="@string/todo" />
 </androidx.constraintlayout.widget.ConstraintLayout>

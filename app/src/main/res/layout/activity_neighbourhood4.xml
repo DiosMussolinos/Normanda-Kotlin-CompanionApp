@@ -4,10 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#a38c67"
     tools:context="Map.Neighbourhood.Neighbourhood4">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageView7"
+        android:layout_width="389dp"
+        android:layout_height="393dp"
+        android:layout_marginTop="444dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_phase_background" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="371dp"
+        android:layout_height="161dp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+        app:layout_constraintEnd_toEndOf="@+id/imageView7"
+        app:layout_constraintStart_toStartOf="@+id/imageView7"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.819"
+        app:srcCompat="@drawable/logo_phase" />
+
+    <ImageView
+        android:id="@+id/BackToMap4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -17,4 +40,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_baseline_close_24" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roman_sd"
+        android:text="@string/not_yet"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

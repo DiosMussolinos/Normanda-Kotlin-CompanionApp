@@ -11,6 +11,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 
 import com.example.normanda_capp.R
 
@@ -30,10 +31,10 @@ class Map : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
-    private lateinit var n1Button: Button
-    private lateinit var n2Button: Button
-    private lateinit var n3Button: Button
-    private lateinit var n4Button: Button
+    private lateinit var n1Button: ImageView
+    private lateinit var n2Button: ImageView
+    private lateinit var n3Button: ImageView
+    private lateinit var n4Button: ImageView
 
 
 
@@ -58,7 +59,7 @@ class Map : Fragment() {
 
         //init image buttons
         n1Button =  view.findViewById(R.id.mapN1)
-        n2Button =  view.findViewById(R.id.MapN2)
+        n2Button =  view.findViewById(R.id.mapN2)
         n3Button =  view.findViewById(R.id.mapN3)
         n4Button =  view.findViewById(R.id.mapN4)
 

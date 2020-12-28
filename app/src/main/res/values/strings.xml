@@ -29,6 +29,11 @@
     <string name="todoasd">TODO</string>
     <string name="todoads">TODO</string>
     <string name="n11">N1!</string>
+    <string name="todo">TODO</string>
+    <string name="not_yet">Not Yet</string>
+
+    <string name="z">TODO</string>
+
 
 
 </resources>

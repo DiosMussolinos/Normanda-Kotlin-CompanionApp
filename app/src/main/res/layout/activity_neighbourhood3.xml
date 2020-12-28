@@ -4,15 +4,54 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#a38c67"
     tools:context="Map.Neighbourhood.Neighbourhood3">
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="389dp"
+        android:layout_height="393dp"
+        android:layout_marginTop="436dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_phase_background" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="371dp"
+        android:layout_height="161dp"
+
+
+        android:layout_marginBottom="112dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.996"
+        app:srcCompat="@drawable/logo_phase" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="N3"
+        android:fontFamily="@font/roman_sd"
+        android:text="NOT YET"
+        android:textSize="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/BackToMap3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_baseline_close_24" />
 </androidx.constraintlayout.widget.ConstraintLayout>
