@@ -9,10 +9,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NormandaCApp">
-        <activity android:name="Map.Neighbourhood.Neighbourhood4"></activity>
+        <receiver
+            android:name=".TimerNotificationActionReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="stop"/>
+                <action android:name="start" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".TimerExpiredReceiver"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity android:name=".TimerChallenge" />
+        <activity android:name="Map.Neighbourhood.Neighbourhood4" />
         <activity android:name="Map.Neighbourhood.Neighbourhood3" />
         <activity android:name="Map.Neighbourhood.Neighbourhood2" />
-        <activity android:name="Map.Neighbourhood.neighbourhood2" />
         <activity android:name="Map.Neighbourhood.Neighbourhood1" />
         <activity android:name=".Normanda_Login" />
         <activity android:name=".MainActivity" />

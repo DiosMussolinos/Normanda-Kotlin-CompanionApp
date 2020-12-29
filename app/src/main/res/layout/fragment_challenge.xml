@@ -8,29 +8,14 @@
     android:layout_gravity="center"
     tools:context=".Fragments.StatsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <!--
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="@string/challenge"
-        android:textColor="@color/black"
-        android:textSize="28sp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="89dp" />
-        -->
-
     <ImageView
         android:id="@+id/backgroundlogo"
         android:layout_width="356dp"
         android:layout_height="169dp"
         android:src="@drawable/logo_phase_background"
-        app:layout_constraintBottom_toTopOf="@+id/challenge_countdown"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/logo2"
@@ -43,84 +28,15 @@
         app:layout_constraintStart_toStartOf="@+id/backgroundlogo"
         app:layout_constraintTop_toTopOf="@+id/backgroundlogo" />
 
-    <me.zhanghai.android.materialprogressbar.MaterialProgressBar
-        android:id="@+id/challenge_countdown"
-        style="@style/Widget.MaterialProgressBar.ProgressBar"
+    <Button
+        android:id="@+id/to_challenge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:minWidth="350dp"
-        android:minHeight="350dp"
-
+        android:text="Go To Challenge"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.44" />
-
-    <TextView
-        android:id="@+id/textCountdown"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roman_sd"
-        android:textColor="#000000"
-        android:textSize="60sp"
-
-        app:layout_constraintBottom_toBottomOf="@+id/challenge_countdown"
-        app:layout_constraintEnd_toEndOf="@+id/challenge_countdown"
-        app:layout_constraintStart_toStartOf="@+id/challenge_countdown"
-        app:layout_constraintTop_toTopOf="@+id/challenge_countdown"
-        app:layout_constraintVertical_bias="0.508"
-        tools:text="@string/_10_00" />
-
-    <ImageView
-        android:id="@+id/StopBackgroundButton"
-        android:layout_width="86dp"
-        android:layout_height="91dp"
-        android:src="@drawable/stop_start_background"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.215"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/challenge_countdown"
-        app:layout_constraintVertical_bias="0.368"
-        android:contentDescription="@string/add" />
-
-    <ImageView
-        android:id="@+id/PlayBackgroundButton"
-        android:layout_width="86dp"
-        android:layout_height="91dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginLeft="64dp"
-        android:src="@drawable/stop_start_background"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.276"
-        app:layout_constraintStart_toEndOf="@+id/StopBackgroundButton"
-        app:layout_constraintTop_toBottomOf="@+id/challenge_countdown"
-        app:layout_constraintVertical_bias="0.368" />
-
-    <ImageView
-        android:id="@+id/stopbutton"
-        android:layout_width="82dp"
-        android:layout_height="82dp"
-        android:src="@drawable/ic_stop_challenge"
-        app:layout_constraintBottom_toBottomOf="@+id/StopBackgroundButton"
-        app:layout_constraintEnd_toEndOf="@+id/StopBackgroundButton"
-        app:layout_constraintStart_toStartOf="@+id/StopBackgroundButton"
-        app:layout_constraintTop_toTopOf="@+id/StopBackgroundButton"
-        android:contentDescription="@string/todoads" />
-
-    <ImageView
-        android:id="@+id/playbutton"
-        android:layout_width="82dp"
-        android:layout_height="83dp"
-        android:src="@drawable/ic_challenge_play"
-        app:layout_constraintBottom_toBottomOf="@+id/PlayBackgroundButton"
-        app:layout_constraintEnd_toEndOf="@+id/PlayBackgroundButton"
-        app:layout_constraintStart_toStartOf="@+id/PlayBackgroundButton"
-        app:layout_constraintTop_toTopOf="@+id/PlayBackgroundButton"
-        android:contentDescription="@string/todoasd" />
+        app:layout_constraintTop_toBottomOf="@+id/backgroundlogo" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
