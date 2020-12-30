@@ -42,7 +42,7 @@ class Wiki : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        ///////////////////ADD THE FUCKING LIST HERE\\\\\\\\\\\\\\\\\\\\\\\\\
         //Swords
         list.add(Items(R.drawable.espada0,"Initial", "10","+5 Damage", "Wood Sword, gift from your master.", R.drawable.gold_bag))
         list.add(Items(R.drawable.espada1,"Radier", "20","+10 Damage", "French sword, weak as their army.", R.drawable.gold_bag))
@@ -52,8 +52,8 @@ class Wiki : Fragment() {
         //Shields
         list.add(Items(R.drawable.escudo0,"Initial", "10","+5 Armor", "Wood Shield, gift from your master.", R.drawable.gold_bag))
         list.add(Items(R.drawable.escudo1,"Nombril", "20","+10 Armor", "Shield from an 'escutcheon' from the heraldry of England", R.drawable.gold_bag))
-        list.add(Items(R.drawable.escudo2,"Escutcheon", "30","+15 Armor", "Templar Shield, used in the first crusade, becoming a sacred weapon", R.drawable.gold_bag))
-        list.add(Items(R.drawable.escudo0,"Mortimer", "40","+15 Armor", "Viking Shield, with the bless of Odin", R.drawable.gold_bag))
+        list.add(Items(R.drawable.escudo2,"Escutcheon", "30","+15 Armor", "Viking Shield, with the bless of Odin", R.drawable.gold_bag))
+        list.add(Items(R.drawable.escudo3,"Mortimer", "40","+20 Armor", "Templar Shield, used in the first crusade, becoming a sacred weapon, used to kill pagans", R.drawable.gold_bag))
 
         //Potions
         list.add(Items(R.drawable.tall_potion,"Tall", "5","+5 Life", "Small Potion, from the 'Stars'", R.drawable.gold_bag))

@@ -8,26 +8,16 @@
     tools:context="Map.Neighbourhood.Neighbourhood4">
 
     <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="389dp"
-        android:layout_height="393dp"
-        android:layout_marginTop="444dp"
+        android:id="@+id/imageView6"
+        android:layout_width="368dp"
+        android:layout_height="192dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo_phase_background" />
-
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="371dp"
-        android:layout_height="161dp"
-
-        app:layout_constraintBottom_toBottomOf="@+id/imageView7"
-        app:layout_constraintEnd_toEndOf="@+id/imageView7"
-        app:layout_constraintStart_toStartOf="@+id/imageView7"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.819"
-        app:srcCompat="@drawable/logo_phase" />
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/logo_phase_plus_background" />
 
     <ImageView
         android:id="@+id/BackToMap4"

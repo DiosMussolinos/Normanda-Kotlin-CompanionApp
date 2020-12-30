@@ -21,9 +21,10 @@
         android:id="@+id/text_credentials"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="456dp"
-        android:layout_marginBottom="13dp"
+        android:layout_marginBottom="36dp"
         android:background="@drawable/get_account"
+        android:bottomLeftRadius="20dip"
+        android:bottomRightRadius="20dip"
         android:fontFamily="@font/roman_sd"
         android:hint="@string/e_mail"
         android:inputType="text"
@@ -31,25 +32,22 @@
         android:paddingEnd="18dp"
         android:textColor="@android:color/black"
         android:textColorHint="@color/black"
+        android:topLeftRadius="20dip"
+        android:topRightRadius="20dip"
         app:layout_constraintBottom_toTopOf="@+id/text_password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/appCompatImageView"
-        app:layout_constraintVertical_bias="0.0"
-        android:topLeftRadius="20dip"
-        android:topRightRadius="20dip"
-        android:bottomLeftRadius="20dip"
-        android:bottomRightRadius="20dip"/>
+        app:layout_constraintVertical_bias="1.0" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/text_password"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="519dp"
         android:layout_marginBottom="36dp"
-        android:fontFamily="@font/roman_sd"
         android:background="@drawable/get_account"
+        android:fontFamily="@font/roman_sd"
         android:hint="@string/password"
         android:inputType="textPassword"
         android:paddingStart="18dp"
@@ -61,7 +59,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/appCompatImageView"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.911" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/sing_in"
@@ -92,28 +90,16 @@
         app:layout_constraintTop_toBottomOf="@+id/sing_in" />
 
     <ImageView
-        android:id="@+id/logo_phase_Back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
+        android:id="@+id/imageView"
+        android:layout_width="368dp"
+        android:layout_height="192dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.627"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/logo_phase_background" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="405dp"
-        android:layout_height="116dp"
-
-        app:layout_constraintBottom_toBottomOf="@+id/logo_phase_Back"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/logo_phase_Back"
-        app:srcCompat="@drawable/logo_phase" />
+        app:layout_constraintVertical_bias="0.122"
+        app:srcCompat="@drawable/logo_phase_plus_background" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

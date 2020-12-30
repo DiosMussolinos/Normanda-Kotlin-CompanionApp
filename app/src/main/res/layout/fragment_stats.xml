@@ -5,42 +5,51 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    android:background="@color/black"
+    android:background="#68583f"
     tools:context=".Fragments.StatsFragment">
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="368dp"
+            android:layout_height="192dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.488"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.087"
+            app:srcCompat="@drawable/logo_phase_plus_background" />
+
         <TextView
             android:id="@+id/atk"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
             android:fontFamily="@font/roman_sd"
             android:text="@string/player_attack_atk"
             android:textColor="#FFFFFF"
             android:textSize="18sp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/textView3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Health"
-            app:layout_constraintVertical_bias="0.224" />
+            app:layout_constraintTop_toBottomOf="@+id/gifImageView" />
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="93dp"
-            android:layout_marginBottom="216dp"
             android:fontFamily="@font/roman_sd"
             android:text="@string/level_player_level"
             android:textColor="#FFFFFF"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/atk"
-            app:layout_constraintVertical_bias="0.321" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/Health"
@@ -50,23 +59,20 @@
             android:text="@string/health_health"
             android:textColor="#FFFFFF"
             android:textSize="18sp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/atk"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.638" />
+            app:layout_constraintTop_toBottomOf="@+id/gifImageView" />
 
-        <ImageView
-            android:id="@+id/player_image"
-            android:layout_width="281dp"
-            android:layout_height="287dp"
-            android:contentDescription="@string/player_image"
-            android:src="@drawable/player_image"
-            app:layout_constraintBottom_toTopOf="@+id/Health"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/gifImageView"
+            android:layout_width="206dp"
+            android:layout_height="171dp"
+            android:src="@drawable/ic_player_gif"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="102dp"
+            tools:layout_editor_absoluteY="280dp"
+            tools:overrideLibrary="pl.droidsonroids.gif/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </RelativeLayout>

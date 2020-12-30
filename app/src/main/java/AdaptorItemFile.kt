@@ -40,8 +40,6 @@ class AdaptorItemFile(private val itemList:ArrayList<Items>): RecyclerView.Adapt
         holder.bag.setImageResource(currentItem.bag)
 
 
-//data class Items(val Image:Int, val name:String, val cost:String, val stat:String, val lore:String)
-
     }
 
     override fun getItemCount(): Int {

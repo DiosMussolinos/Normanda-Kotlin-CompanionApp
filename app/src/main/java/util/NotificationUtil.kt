@@ -34,7 +34,7 @@ class NotificationUtil {
             nBuilder.setContentTitle("Timer Expired!")
                 .setContentText("Start Again?")
                 .setContentIntent(getPendingIntentWithStack(context, TimerChallenge::class.java))
-                .addAction(R.drawable.ic_play_bigger, "Start", startPedingIntent)
+                .addAction(R.drawable.ic_play_bigger, "Let's Go Again!", startPedingIntent)
 
             val nManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
             nManager.createNotificationChannel(CHANNEL_ID_TIMER, CHANNEL_NAME_TIMER, true)
@@ -55,7 +55,7 @@ class NotificationUtil {
                 .setContentText("End: ${df.format(Date(wakeUpTime))}")
                 .setContentIntent(getPendingIntentWithStack(context, TimerChallenge::class.java))
                 .setOngoing(true)
-                .addAction(R.drawable.ic_stop_challenge, "Stop", stopPendingIntent)
+                .addAction(R.drawable.ic_stop_challenge, "Surrender", stopPendingIntent)
 
             val nManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
 
@@ -72,7 +72,7 @@ class NotificationUtil {
                 : NotificationCompat.Builder{
             val notificationSound: Uri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
             val nBuilder = NotificationCompat.Builder(context, channelId)
-                .setSmallIcon(R.drawable.ic_baseline_fitness)
+                .setSmallIcon(R.drawable.n_image)
                 .setAutoCancel(true)
                 .setDefaults(0)
             if (playSound) nBuilder.setSound(notificationSound)

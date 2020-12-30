@@ -9,6 +9,8 @@ class PrefUtil {
 
         fun getTimerLenght(context: Context): Int{
 
+            //TODO: BEING ABLE TO CHANGE THE TIMER
+
             return 1
         }
 
