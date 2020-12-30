@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/trans_yellow"
+    android:background="#a38c67"
+
     android:layout_gravity="center"
     tools:context=".Fragments.StatsFragment">
 
@@ -22,15 +23,40 @@
 
     <Button
         android:id="@+id/to_challenge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="204dp"
-        android:text="Go To Challenge"
+        android:layout_width="278dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="109dp"
+        android:layout_marginBottom="136dp"
+        android:fontFamily="@font/roman_sd"
+        android:text="Set a Challenge"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EnAmount"
+        app:layout_constraintVertical_bias="0.855" />
+
+    <TextView
+        android:id="@+id/EnAmount"
+        android:layout_width="365dp"
+        android:layout_height="126dp"
+        android:layout_marginTop="82dp"
+        android:layout_marginBottom="284dp"
+        android:fontFamily="@font/roman_sd"
+        android:gravity="center_horizontal"
+
+
+        android:text="You must kill X Enemies"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.456"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView8"
-        app:layout_constraintVertical_bias="0.879" />
+        app:layout_constraintVertical_bias="1.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

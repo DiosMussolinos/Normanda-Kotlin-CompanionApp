@@ -8,13 +8,18 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 import com.example.normanda_capp.R
 import com.example.normanda_capp.TimerChallenge
+import org.w3c.dom.Text
+import kotlin.properties.Delegates
 
 
 class Challenge : Fragment(R.layout.fragment_challenge) {
 
     private lateinit var toTimer: Button
+    private lateinit var AmountText:TextView
+    private var AmountEnemies by Delegates.notNull<Int>()
 
     // TODO: Rename and change types of parameters
     private var param1: String? = null
@@ -32,6 +37,7 @@ class Challenge : Fragment(R.layout.fragment_challenge) {
         super.onViewCreated(view, savedInstanceState)
 
         toTimer =  view.findViewById(R.id.to_challenge)
+        AmountText =  view.findViewById(R.id.EnAmount)
 
         //GO TO N1
         toTimer.setOnClickListener {
@@ -39,6 +45,14 @@ class Challenge : Fragment(R.layout.fragment_challenge) {
                 startActivity(Intent(this, TimerChallenge::class.java))
                 finish()
             }
+        }
+
+        AmountEnemies = 0
+
+        if(AmountEnemies <= 0){
+            AmountText.text ="No challenge Set"
+        } else {
+            AmountText.text = "You must kill $AmountEnemies Enemies"
         }
 
     }
