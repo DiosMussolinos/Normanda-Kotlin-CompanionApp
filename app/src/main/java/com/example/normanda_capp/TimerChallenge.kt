@@ -2,6 +2,7 @@ package com.example.normanda_capp
 
 import android.app.AlarmManager
 import android.app.PendingIntent
+import android.app.TimePickerDialog
 import android.content.Context
 import android.content.Intent
 import android.os.Build
@@ -12,9 +13,11 @@ import android.view.Menu
 import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
+import android.widget.TimePicker
 import androidx.annotation.RequiresApi
 import com.example.freshexample.util.NotificationUtil
 import com.example.freshexample.util.PrefUtil
+import java.text.SimpleDateFormat
 import java.util.*
 
 private lateinit var  closeImage: ImageView
@@ -94,6 +97,17 @@ class TimerChallenge : AppCompatActivity() {
             onTimerFinished()
             updateButtons()
         }
+
+        progressText.setOnClickListener {
+            val cal = Calendar.getInstance()
+            val timeSetListener = TimePickerDialog.OnTimeSetListener {TimePicker, minute: Int, second: Int ->
+                cal.set(Calendar.MINUTE, minute)
+                cal.set(Calendar.SECOND, second)
+                progressText.text = SimpleDateFormat("mm:ss").format(cal.time)
+            }
+            TimePickerDialog(this, timeSetListener, cal.get(Calendar.MINUTE), cal.get(Calendar.SECOND), true).show()
+        }
+
     }
 
     override fun onResume(){
@@ -181,6 +195,7 @@ class TimerChallenge : AppCompatActivity() {
 
     private fun setNewTimerLenght(){
         val lengthInMinutes = PrefUtil.getTimerLenght(this)
+        //PrefUtil.getTimerLenght(this)
         timerLengthSeconds = (lengthInMinutes * 60L)
         progress.max = timerLengthSeconds.toInt()
     }
