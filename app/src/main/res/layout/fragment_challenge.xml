@@ -21,22 +21,6 @@
         app:layout_constraintVertical_bias="0.087"
         app:srcCompat="@drawable/logo_phase_plus_background" />
 
-    <Button
-        android:id="@+id/to_challenge"
-        android:layout_width="278dp"
-        android:layout_height="66dp"
-        android:layout_marginTop="109dp"
-        android:layout_marginBottom="136dp"
-        android:fontFamily="@font/roman_sd"
-        android:text="Set a Challenge"
-        app:layout_constraintBottom_toBottomOf="parent"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EnAmount"
-        app:layout_constraintVertical_bias="0.855" />
-
     <TextView
         android:id="@+id/EnAmount"
         android:layout_width="365dp"
@@ -57,6 +41,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView8"
         app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/to_challenge"
+        android:layout_width="301dp"
+        android:layout_height="331dp"
+        android:src="@drawable/set_challenge"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EnAmount"
+        app:layout_constraintVertical_bias="0.68" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

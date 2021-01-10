@@ -59,6 +59,11 @@ class Wiki : Fragment() {
         list.add(Items(R.drawable.tall_potion,"Tall", "5","+5 Life", "Small Potion, from the 'Stars'", R.drawable.gold_bag))
         list.add(Items(R.drawable.venti_potion,"Venti", "15","+15 Life", "Medium Potion, from the 'Stars'", R.drawable.gold_bag))
         list.add(Items(R.drawable.trenta_potion,"Trenta", "50","+60 Life", "Big Potion, from the 'Stars'", R.drawable.gold_bag))
+
+        //Treasure Maps
+        list.add(Items(R.drawable.pergaminho_do_tesouro, "Map N2", "0", "New Items", "The king of pirates, gold roger, gave his life to this treasure. Reach the final one!", R.drawable.gold_bag))
+        list.add(Items(R.drawable.pergaminho_do_tesouro, "Map N3", "0", "New Items", "The king of pirates, Gold Roger, once said 'My wealth and treasures? It's all yours, i left it all there!'", R.drawable.gold_bag))
+
         ///////////////////ADD THE FUCKING LIST HERE\\\\\\\\\\\\\\\\\\\\\\\\\
         //data class Items(val Image:Int, val name:String, val cost:String, val stat:String, val lore:String) {
 

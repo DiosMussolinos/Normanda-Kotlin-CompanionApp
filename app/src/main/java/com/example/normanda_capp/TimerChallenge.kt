@@ -1,5 +1,6 @@
 package com.example.normanda_capp
 
+import android.annotation.SuppressLint
 import android.app.AlarmManager
 import android.app.PendingIntent
 import android.app.TimePickerDialog
@@ -17,6 +18,7 @@ import android.widget.TimePicker
 import androidx.annotation.RequiresApi
 import com.example.freshexample.util.NotificationUtil
 import com.example.freshexample.util.PrefUtil
+import com.example.normanda_capp.Fragments.Challenge
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -26,10 +28,12 @@ private lateinit var  stop: ImageView
 private lateinit var progressText: TextView
 private lateinit var progress: ProgressBar
 
-
 class TimerChallenge : AppCompatActivity() {
-
     companion object{
+        //lenthInMinutes Defines the timer Lenth AND the amount of enemies of the challenge
+        var lengthInMinutes: Int = 0
+        //var TIMER_LENGTH_ID = 0
+
         @RequiresApi(Build.VERSION_CODES.KITKAT)
         fun setAlarm(context: Context, nowSeconds: Long, secondsRemaining:Long):Long{
             val wakeUpTime = (nowSeconds + secondsRemaining) * 1000
@@ -67,6 +71,7 @@ class TimerChallenge : AppCompatActivity() {
 
     private var secondsRemaining = 0L
 
+    @SuppressLint("SimpleDateFormat")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_timer_challenge)
@@ -89,6 +94,7 @@ class TimerChallenge : AppCompatActivity() {
             startTimer()
             timerState = TimerState.Running
             updateButtons()
+            //lengthInMinutes = SimpleDateFormat.MINUTE_FIELD
         }
 
         stop.setOnClickListener{
@@ -98,16 +104,23 @@ class TimerChallenge : AppCompatActivity() {
             updateButtons()
         }
 
+        //What Android Developers has to say? Line 107 & 108
+        //	onTimeSet(TimePicker view, int hourOfDay, int minute)
+        //  view	TimePicker: the view associated with this listener
         progressText.setOnClickListener {
             val cal = Calendar.getInstance()
-            val timeSetListener = TimePickerDialog.OnTimeSetListener {TimePicker, minute: Int, second: Int ->
+            val timeSetListener = TimePickerDialog.OnTimeSetListener { view, minute: Int, second: Int ->
                 cal.set(Calendar.MINUTE, minute)
-                cal.set(Calendar.SECOND, second)
-                progressText.text = SimpleDateFormat("mm:ss").format(cal.time)
+                //cal.set(Calendar.SECOND, second)
+                //progressText.text = SimpleDateFormat.MINUTE_FIELD.toString()
+                progressText.text = SimpleDateFormat("mm:00").format(cal.time)
+                //PROBLEM HERE - As "Run" Says
+                lengthInMinutes = minute
+                ///Challenge.timeSetForChallenge = minute
             }
             TimePickerDialog(this, timeSetListener, cal.get(Calendar.MINUTE), cal.get(Calendar.SECOND), true).show()
         }
-
+        /////////////////////////////FINISHED THE PART OF THE PROBLEM/////////////////////////////
     }
 
     override fun onResume(){
@@ -130,7 +143,6 @@ class TimerChallenge : AppCompatActivity() {
             timer.cancel()
             val wakeUpTime = setAlarm(this, nowSeconds, secondsRemaining)
             NotificationUtil.showTimerRunning(this, wakeUpTime)
-            //Todo: Start background timer
         }
 
         PrefUtil.setPreviousTimerLengthSeconds(timerLengthSeconds, this)
@@ -194,10 +206,11 @@ class TimerChallenge : AppCompatActivity() {
     }
 
     private fun setNewTimerLenght(){
-        val lengthInMinutes = PrefUtil.getTimerLenght(this)
+
         //PrefUtil.getTimerLenght(this)
         timerLengthSeconds = (lengthInMinutes * 60L)
         progress.max = timerLengthSeconds.toInt()
+
     }
 
     private fun setPreviousTimerLenght(){
@@ -207,12 +220,15 @@ class TimerChallenge : AppCompatActivity() {
 
     private fun updateCountdownUI(){
         val minutesUntilFinished = secondsRemaining/60
-        val secondsInMinuteUntilFinished = secondsRemaining - minutesUntilFinished*60
+        val secondsInMinuteUntilFinished = secondsRemaining - minutesUntilFinished * 60
         val secondsStr = secondsInMinuteUntilFinished.toString()
         progressText.text = "$minutesUntilFinished:${
             if (secondsStr.length == 2) secondsStr
-        else "0"+ secondsStr}"
+            else "0"+ secondsStr}"
         progress.progress = (timerLengthSeconds - secondsRemaining).toInt()
+        if(timerState == TimerState.Stopped) {
+            lengthInMinutes = 0
+        }
     }
 
     private fun updateButtons(){
@@ -227,15 +243,4 @@ class TimerChallenge : AppCompatActivity() {
             }
         }
     }
-
-
-
-
-
-
-
-
-
-
-
 }

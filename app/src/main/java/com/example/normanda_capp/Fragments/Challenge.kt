@@ -1,4 +1,4 @@
-package com.example.normanda_capp.Fragments
+ package com.example.normanda_capp.Fragments
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,17 +9,21 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import com.example.freshexample.util.PrefUtil
+
 import com.example.normanda_capp.R
 import com.example.normanda_capp.TimerChallenge
 import org.w3c.dom.Text
+import java.lang.StrictMath.abs
 import kotlin.properties.Delegates
 
 
 class Challenge : Fragment(R.layout.fragment_challenge) {
 
-    private lateinit var toTimer: Button
-    private lateinit var AmountText:TextView
-    private var AmountEnemies by Delegates.notNull<Int>()
+    private lateinit var toTimer: ImageView
+    private lateinit var amountText:TextView
+    var timeSetForChallenge:Int = TimerChallenge.lengthInMinutes
+    private val amountEnemies = abs(timeSetForChallenge*2)
 
     // TODO: Rename and change types of parameters
     private var param1: String? = null
@@ -37,8 +41,7 @@ class Challenge : Fragment(R.layout.fragment_challenge) {
         super.onViewCreated(view, savedInstanceState)
 
         toTimer =  view.findViewById(R.id.to_challenge)
-        AmountText =  view.findViewById(R.id.EnAmount)
-
+        amountText =  view.findViewById(R.id.EnAmount)
         //GO TO N1
         toTimer.setOnClickListener {
             requireActivity().run {
@@ -47,12 +50,10 @@ class Challenge : Fragment(R.layout.fragment_challenge) {
             }
         }
 
-        AmountEnemies = 0
-
-        if(AmountEnemies <= 0){
-            AmountText.text ="No challenge Set"
+        if(amountEnemies <= 0){
+            amountText.text ="No challenge Set"
         } else {
-            AmountText.text = "You must kill $AmountEnemies Enemies"
+            amountText.text = "You must kill $amountEnemies Enemies"
         }
 
     }

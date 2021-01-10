@@ -7,14 +7,13 @@ import com.example.normanda_capp.TimerChallenge
 class PrefUtil {
     companion object{
 
-        private const val TIMER_LENGTH_ID = "com.resocoder.timer.timer_length"
+
         fun getTimerLenght(context: Context): Int{
             val preferences = PreferenceManager.getDefaultSharedPreferences(context)
-            return preferences.getInt(TIMER_LENGTH_ID, 10)
+            return TimerChallenge.lengthInMinutes
         }
 
         private const val PREVIOUS_TIMER_LENGTH_SECONDS_ID = "com.resocoder.timer.previous_timer_length"
-
         fun getPreviousTimerLengthSeconds(context: Context): Long{
             val preferences = PreferenceManager.getDefaultSharedPreferences(context)
             return preferences.getLong(PREVIOUS_TIMER_LENGTH_SECONDS_ID, 0)
@@ -27,7 +26,6 @@ class PrefUtil {
         }
 
         private const val  TIMER_STATE_ID = "com.resocoder.timer.timer_state"
-
         fun getTimerState(context: Context): TimerChallenge.TimerState{
             val preferences = PreferenceManager.getDefaultSharedPreferences(context)
             val ordinal = preferences.getInt(TIMER_STATE_ID, 0)
@@ -43,7 +41,6 @@ class PrefUtil {
         }
 
         private const val SECONDS_REMAINING_ID = "com.resocoder.timer.seconds_remaining"
-
         fun getSecondsRemaining(context: Context): Long{
             val preferences = PreferenceManager.getDefaultSharedPreferences(context)
             return preferences.getLong(SECONDS_REMAINING_ID, 0)

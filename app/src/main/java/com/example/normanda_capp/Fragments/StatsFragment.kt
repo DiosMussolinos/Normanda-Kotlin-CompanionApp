@@ -12,6 +12,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import com.example.freshexample.Items
+import com.example.freshexample.Player
 import com.example.normanda_capp.R
 import javax.xml.xpath.XPath
 
@@ -55,9 +57,6 @@ class StatsFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_stats, container, false)
 
-
-
-
     }
 
 
@@ -76,9 +75,5 @@ class StatsFragment : Fragment() {
         gold.text = "Gold = $Money"
         experience.text = "XP = $XP"
         level.text = "Level = $LevelShow"
-
-
-
-
     }
 }
