@@ -6,7 +6,13 @@ import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.PagerAdapter
 import androidx.viewpager.widget.ViewPager
+
 import com.example.normanda_capp.Adaptor.PagerAdaptor
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+
+var Id:Int = 0;
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,10 +24,19 @@ class MainActivity : AppCompatActivity() {
     private lateinit var mPagerAdapter: PagerAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
-
-
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        //////////////////////RETROFIT\\\\\\\\\\\\\\\\\\\\\\
+        //val retrofit = Client
+        //    .getRetrofitInstance("http://192.168.1.91:3909/") //be carefull when using the emulator or the phone. If you are using the phone, make sure you are on the same LAN
+
+        //val endpoint = retrofit.create(Routes::class.java)
+        //val callback = endpoint.getPets()
+
+        //////////////////////RETROFIT\\\\\\\\\\\\\\\\\\\\\\
+
+
 
         // init view
         mViewPager = findViewById(R.id.mViewPager)

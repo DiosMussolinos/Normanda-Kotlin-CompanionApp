@@ -26,7 +26,7 @@
         android:bottomLeftRadius="20dip"
         android:bottomRightRadius="20dip"
         android:fontFamily="@font/roman_sd"
-        android:hint="@string/e_mail"
+        android:hint="username"
         android:inputType="text"
         android:paddingStart="18dp"
         android:paddingEnd="18dp"
@@ -74,20 +74,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.887" />
-
-    <TextView
-        android:id="@+id/forgot_password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roman_sd"
-        android:text="@string/forgot_password"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/appCompatImageView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sing_in" />
 
     <ImageView
         android:id="@+id/imageView"
