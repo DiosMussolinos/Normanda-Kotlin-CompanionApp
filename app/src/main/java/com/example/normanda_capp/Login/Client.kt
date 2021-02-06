@@ -11,6 +11,8 @@ class Client {
             return Retrofit.Builder()
                 .baseUrl(path)
                 .addConverterFactory(GsonConverterFactory.create()) //Retrofit client can now convert to JSON
-                .build() } }
+                .build()
+        }
+    }
 
 }

@@ -7,7 +7,6 @@ import com.example.normanda_capp.TimerChallenge
 class PrefUtil {
     companion object{
 
-
         fun getTimerLenght(context: Context): Int{
             val preferences = PreferenceManager.getDefaultSharedPreferences(context)
             return TimerChallenge.lengthInMinutes

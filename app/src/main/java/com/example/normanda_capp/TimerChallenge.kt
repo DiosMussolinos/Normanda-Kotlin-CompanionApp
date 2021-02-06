@@ -10,15 +10,20 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
-import android.view.Menu
-import android.widget.ImageView
-import android.widget.ProgressBar
-import android.widget.TextView
-import android.widget.TimePicker
+import android.widget.*
 import androidx.annotation.RequiresApi
+import com.example.freshexample.com.example.normanda_capp.EnemiesToKill
+import com.example.freshexample.com.example.normanda_capp.Global
+import com.example.freshexample.com.example.normanda_capp.Login.ChallengeToServer
+import com.example.freshexample.com.example.normanda_capp.Login.Client
+import com.example.freshexample.com.example.normanda_capp.Login.Routes
+import com.example.freshexample.com.example.normanda_capp.Login.User
 import com.example.freshexample.util.NotificationUtil
 import com.example.freshexample.util.PrefUtil
 import com.example.normanda_capp.Fragments.Challenge
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -117,6 +122,16 @@ class TimerChallenge : AppCompatActivity() {
                 //PROBLEM HERE - As "Run" Says
                 lengthInMinutes = minute
                 ///Challenge.timeSetForChallenge = minute
+                //val enemiesMustkill = 2 * lengthInMinutes
+                EnemiesToKill.EnemiesToKillToAct = 2* lengthInMinutes
+
+
+
+                //Sending to challenge
+                //val timeAndEnemies = Challenge(true , lengthInMinutes, enemiesMustkill)
+                //sendChallenge(timeAndEnemies)
+
+
             }
             TimePickerDialog(this, timeSetListener, cal.get(Calendar.MINUTE), cal.get(Calendar.SECOND), true).show()
         }
@@ -228,6 +243,7 @@ class TimerChallenge : AppCompatActivity() {
         progress.progress = (timerLengthSeconds - secondsRemaining).toInt()
         if(timerState == TimerState.Stopped) {
             lengthInMinutes = 0
+            EnemiesToKill.EnemiesToKillToAct = 0
         }
     }
 
@@ -243,4 +259,30 @@ class TimerChallenge : AppCompatActivity() {
             }
         }
     }
+
+    fun getAmount(): Int {
+        var insideAmount:Int = EnemiesToKill.EnemiesToKillToAct;
+        return insideAmount;
+    }
+
 }
+/*
+fun sendChallenge(challenge: Challenge) {
+    val retrofitClient = Client
+            .getRetrofitInstance("http://10.0.2.2:3909/")
+    val endpoint =retrofitClient.create(Routes::class.java)
+    //val callback = endpoint.login()
+    endpoint.sendChallenge(ChallengeToServer).enqueue(
+              object : Callback<ChallengeToServer>{
+                override fun onResponse(call: Call<ChallengeToServer>, response: Response<ChallengeToServer>) {
+
+                    //SET USERID FOR FUTURE POSTS & GETS
+                    println("AQUAQUIAQUIAQUIAQUIAQUIAQUIAQUIAQUIAQUIAQUIAQUIAQUIAQUIAQUIAQUIAQUIAQUIAQUIAQUIAQUIAQUIAQUIAQUIAQUIAQUIAQUIAQUIAQUIAQUIAQUIAQUIAQUIAQUIAQUIAQUIAQUIAQUIAQUIAQUIAQUIAQUII")
+                }
+
+                //override fun onFailure(call: Call<Challenge>, t: Throwable) {
+                //    println(t.message.toString())
+                //}
+            }
+    )
+}*/

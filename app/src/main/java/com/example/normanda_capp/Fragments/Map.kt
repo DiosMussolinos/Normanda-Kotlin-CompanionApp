@@ -73,18 +73,18 @@ class Map : Fragment() {
 
         //GO TO N3
         n3Button.setOnClickListener {
-            requireActivity().run {
-                startActivity(Intent(this, Neighbourhood3::class.java))
-                finish()
-            }
+            //requireActivity().run {
+            //    startActivity(Intent(this, Neighbourhood3::class.java))
+            //    finish()
+            //}
         }
 
         //GO TO N4
         n4Button.setOnClickListener{
-            requireActivity().run {
-                startActivity(Intent(this, Neighbourhood4::class.java))
-                finish()
-            }
+            //requireActivity().run {
+            //    startActivity(Intent(this, Neighbourhood4::class.java))
+            //    finish()
+            //}
         }
     }
 }
