@@ -46,8 +46,8 @@ class Wiki : Fragment() {
         //Swords
         list.add(Items(R.drawable.espada0,"Initial", "10","+5 Damage", "Wood Sword, gift from your master.", R.drawable.gold_bag))
         list.add(Items(R.drawable.espada1,"Radier", "20","+10 Damage", "French sword, weak as their army.", R.drawable.gold_bag))
-        list.add(Items(R.drawable.espada2,"Bastard", "30","+15 Damage", "Old Templary sword, with the power of all the men who die with it.", R.drawable.gold_bag))
-        list.add(Items(R.drawable.espada3,"Claymore", "40","+20 Damage", "D'Artagnan Sword, a legendary weapon from the most unique tales ever written", R.drawable.gold_bag))
+        list.add(Items(R.drawable.espada3,"Bastard", "30","+15 Damage", "Old Templary sword, with the power of all the men who die with it.", R.drawable.gold_bag))
+        list.add(Items(R.drawable.espada4,"Claymore", "40","+20 Damage", "D'Artagnan Sword, a legendary weapon from the most unique tales ever written", R.drawable.gold_bag))
 
         //Shields
         list.add(Items(R.drawable.escudo0,"Initial", "10","+5 Armor", "Wood Shield, gift from your master.", R.drawable.gold_bag))

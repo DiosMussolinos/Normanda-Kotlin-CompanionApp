@@ -61,6 +61,8 @@ import java.lang.StrictMath.abs
              //amountText.text = "You must kill $Global.amountEnemies Enemies"
              amountText.text ="No challenge Set"
          }
+
+         println(amountText)
      }
 
  }
